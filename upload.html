@@ -1,0 +1,110 @@
+<?php
+	
+	/**
+		* DataBase
+	*/
+
+	// DataBase Configuration
+	
+	$DB_HOST = "127.0.0.1";
+	$DB_USER = "root";
+	$DB_PASS = "";
+	$DB_NAME = "reps_db";
+
+	$conn = mysqli_connect($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+
+	//End Configuration
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://20.70.171.130/reps/dist/css/adminlte.css">
+    <link rel="stylesheet" href="http://20.70.171.130/reps/dist/css/custom.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="content  text-dark">
+        <div class="container-fluid">
+          <style>
+  img#cimg{
+      max-height: 20vh;
+      width: 100%;
+      object-fit: scale-down;
+      object-position: center center;
+  }
+</style>
+<div class="card card-outline rounded-0 card-info">
+  <div class="card-header">
+      <h3 class="card-title">Create New Document</h3>
+  </div>
+  <div class="card-body">
+      <form action="" id="estate-form">
+          
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="fname" class="control-label">First Name</label>
+                      <input type="text" name="fname" id="name" class="form-control form-control-sm rounded-0" required value="" />
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="lname" class="control-label">Last Name</label>
+                      <input type="text" name="lname" id="lname" class="form-control form-control-sm rounded-0" required value="" />
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="Phone" class="control-label">Phone</label>
+                      <input type="text" name="Phone" id="Phone" class="form-control form-control-sm rounded-0" required value="" />
+                  </div>
+              </div>
+              
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="coordinates" class="control-label">Map Coordinates</label>
+                      <input type="text" name="coordinates" id="coordinates" class="form-control form-control-sm rounded-0" required value="" />
+                  </div>
+              </div>
+          </div>
+         
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="" class="control-label">Other Images</label>
+                      <div class="custom-file">
+                      <input type="file" class="custom-file-input rounded-circle" id="customFile" name="imgs[]" multiple accept="image/png, image/jpeg" onchange="displayImg2(this,$(this))">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                      </div>
+                  </div>
+                  <div class="row my-3">
+                                      </div>
+              </div>
+          </div>
+          <!-- <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="status" class="control-label">Status</label>
+                      <select name="status" id="status" class="custom-select custom-select-sm rounded-0 selevt">
+                          <option value="1" >Active</option>
+                          <option value="0" >Inactive</option>
+                      </select>
+                  </div>
+              </div>
+          </div> -->
+          
+      </form>
+  </div>
+  <div class="card-footer">
+      <button class="btn btn-flat btn-primary" form="estate-form">Save</button>
+      <a class="btn btn-flat btn-default" href="?page=estate">Cancel</a>
+  </div>
+</div>
+</div>
+      </section>
+</body>
+</html>
